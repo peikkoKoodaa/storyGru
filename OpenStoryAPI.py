@@ -171,9 +171,6 @@ def generate_text(
         recent_tokens.append(next_token)
         last_token = torch.tensor([[next_token]], dtype=torch.long).to(device)
 
-        if generated.count("Once upon a time") > 1:
-            break
-
     return clean_text(generated)
 
 
